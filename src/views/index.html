@@ -43,6 +43,8 @@
     <link href="css/examples.css" rel="stylesheet">
     <script src="js/config.js"></script>
     <script src="js/color-modes.js"></script>
+    <script src="src/js/github.js"></script>
+    <link href="node_modules/@coreui/icons/css/free.min.css" rel="stylesheet">
     <link href="node_modules/@coreui/chartjs/dist/css/coreui-chartjs.css" rel="stylesheet">
   </head>
   <body>
@@ -334,7 +336,24 @@
       </header>
       <div class="body flex-grow-1">
         <div class="container-lg px-4">
-          <div class="row g-4 mb-4">
+          <div class="row d-flex flex-wrap align-items-center justify-content-between">
+            <div class="col-sm-6 col-xl-9">
+              <span class="display-1">Elias Khallouk</span>
+              <h2>
+                Étudiant ingénieur EFREI en big data & machine learning <br>
+                <i class="icon icon-xxl mb-2 cil-arrow-right"></i> Recherche contrat d'apprentissage
+              </h2>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                  <img  class="card" src="assets/img/Elias_remise_diplome.jpg" alt="Photo de Elias Khallouk" class="img-fluid" style="width: 100%; height: 100%;">
+            </div>
+            <!--<div>
+              <img src="assets/img/Elias_remise_diplome.jpg" alt="Photo de Elias Khallouk" class="img-fluid" style="max-width: 237px; border-radius: 55% 25% 17% 69% / 16% 28% 57% 92% ;">
+            </div>-->
+          </div>
+
+            
+          <div class="row g-4 mb-4" style="margin-top: var(--cui-gutter-y);">
             <div class="col-sm-6 col-xl-3">
               <div class="card text-white bg-primary">
                 <div class="card-body pb-0 d-flex justify-content-between align-items-start">
@@ -437,6 +456,254 @@
             <!-- /.col-->
           </div>
           <!-- /.row-->
+
+
+          <style>
+           
+        
+            .timeline {
+              position: relative;
+              margin: 193px auto;
+              padding: 0 20px;
+              list-style: none;
+              margin-bottom: 291px;
+
+            }
+        
+            .timeline::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              bottom: -110px;
+              left: 50%;
+              width: 4px;
+              background: #ccc;
+              transform: translateX(-50%);
+              background: rgb(80,80,80);
+              background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+              background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+              background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+              background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+              background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+              background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+              
+            }
+        
+            .timeline li {
+              position: relative;
+              margin-bottom: 50px;
+              width: 100%;
+              clear: both;
+              padding-top: 73px;
+            }
+        
+            .timeline .direction-l,
+            .timeline .direction-r {
+              width: 45%;
+              padding: 0 20px;
+            }
+        
+            .timeline .direction-l {
+              float: left;
+              text-align: right;
+            }
+        
+            .timeline .direction-r {
+              float: right;
+              text-align: left;
+            }
+        
+            .flag-wrapper {
+              position: relative;
+              display: inline-block;
+            }
+        
+            .flag {
+              background: #f0f0f0;
+              padding: 10px 15px;
+              border-radius: 5px;
+              font-weight: 600;
+              position: relative;
+              display: inline-block;
+              color : 	rgb(33, 38, 49);
+            }
+        
+            .flag-before-ingenieur::before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 128%;
+              width: 25px;
+              height: 25px;
+              transform: translate(-50%, -50%);
+              background: #fff;
+              border-radius: 50%;
+              border: 8px solid #229741; /* vert */
+              z-index: 1;
+            }
+
+            .flag-before-mobilite::before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: -36%;
+              width: 25px;
+              height: 25px;
+              transform: translate(-50%, -50%);
+              background: #fff;
+              border-radius: 50%;
+              border: 8px solid #3d99f5; /* bleu */
+              z-index: 1;
+            }
+
+            .flag-before-but::before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 151%;
+              width: 25px;
+              height: 25px;
+              transform: translate(-50%, -50%);
+              background: #fff;
+              border-radius: 50%;
+              border: 8px solid #de5a5a; /* rouge */
+              z-index: 1;
+            }
+
+            .flag-before-bac::before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: -44%;
+              width: 25px;
+              height: 25px;
+              transform: translate(-50%, -50%);
+              background: #fff;
+              border-radius: 50%;
+              border: 8px solid #eead20; /* jaune */
+              z-index: 1;
+            }
+
+        
+            .flag-success:before { color: #229741; }
+            .flag-danger:before  { color: #de5a5a; }
+            .flag-warning:before { color: #eead20; }
+            .flag-info:before    { color: #3d99f5; }
+        
+            .time-wrapper {
+              margin-top: 6px;
+              font-size: 0.8em;
+              color: #888;
+            }
+        
+            .time {
+              display: inline-block;
+              padding: 4px 8px;
+              border-radius: 4px;
+              font-weight: bold;
+              color: white;
+            }
+        
+            .time-success { background-color: #229741; }
+            .time-danger  { background-color: #de5a5a; }
+            .time-warning { background-color: #eead20; color: black; }
+            .time-info    { background-color: #3d99f5; }
+        
+            .desc {
+              font-style: italic;
+              margin-top: 10px;
+              line-height: 1.4em;
+            }
+        
+            /* Responsive */
+            @media (max-width: 768px) {
+              .timeline::before {
+                left: 20px;
+              }
+        
+              .timeline .direction-l,
+              .timeline .direction-r {
+                float: none;
+                width: 100%;
+                text-align: left;
+                padding-left: 40px;
+                margin-bottom: 40px;
+              }
+        
+              .flag:before {
+                left: -87px;
+                transform: translateY(-50%);
+              }
+
+              .flag-ing:before {
+                left: -87px;
+                transform: translateY(-50%);
+              }
+        
+              .flag,
+              .time-wrapper,
+              .desc {
+                margin-left: 40px;
+              }
+            }
+          </style>
+        
+        <ul class="timeline">
+          <!-- Formation 1 -->
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                <span class="flag flag-before-ingenieur  flag-success">Ingénieur Big Data Machine Learning</span>
+                <div class="time-wrapper">
+                  <span class="time time-success">2028</span>
+                </div>
+              </div>
+              <div class="desc">Alternance (1 semaine / 1 semaine) <br> EFREI, Bordeaux</div>
+            </div>
+          </li>
+      
+          <!-- Formation 2 -->
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="flag flag-before-mobilite flag-info">Baccalauréat Informatique</span>
+                <div class="time-wrapper">
+                  <span class="time time-info">2025</span>
+                </div>
+              </div>
+              <div class="desc">Université du Québec à Chicoutimi, Canada</div>
+            </div>
+          </li>
+      
+          <!-- Formation 3 -->
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                <span class="flag flag-before-but flag-danger">BUT Informatique</span>
+                <div class="time-wrapper">
+                  <span class="time time-danger">2025</span>
+                </div>
+              </div>
+              <div class="desc">Parcours administration, gestion et éxploitation de bade de donnée <br>IUT Nord Franche-Comté</div>
+            </div>
+          </li>
+      
+          <!-- Formation 4 -->
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="flag flag-before-bac flag-warning">Baccalauréat Général</span>
+                <div class="time-wrapper">
+                  <span class="time time-warning">2022</span>
+                </div>
+              </div>
+              <div class="desc">Spécialités mathématiques, Numérique et Science de l'Informatique — avec mention <br> Lycée François Magendie, Bordeaux</div>
+            </div>
+          </li>
+        </ul>
+          
+          
+
           <div class="card mb-4">
             <div class="card-body">
               <div class="d-flex justify-content-between">
@@ -506,78 +773,42 @@
           </div>
           <!-- /.card-->
           <div class="row g-4 mb-4">
-            <div class="col-sm-6 col-lg-4">
-              <div class="card" style="--cui-card-cap-bg: #3b5998">
-                <div class="card-header position-relative d-flex justify-content-center align-items-center">
-                  <svg class="icon icon-3xl text-white my-4">
-                    <use xlink:href="node_modules/@coreui/icons/sprites/brand.svg#cib-facebook-f"></use>
-                  </svg>
-                  <div class="chart-wrapper position-absolute top-0 start-0 w-100 h-100">
-                    <canvas id="social-box-chart-1" height="90"></canvas>
-                  </div>
-                </div>
-                <div class="card-body row text-center">
-                  <div class="col">
-                    <div class="fs-5 fw-semibold">89k</div>
-                    <div class="text-uppercase text-body-secondary small">friends</div>
-                  </div>
-                  <div class="vr"></div>
-                  <div class="col">
-                    <div class="fs-5 fw-semibold">459</div>
-                    <div class="text-uppercase text-body-secondary small">feeds</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /.col-->
-            <div class="col-sm-6 col-lg-4">
-              <div class="card" style="--cui-card-cap-bg: #00aced">
-                <div class="card-header position-relative d-flex justify-content-center align-items-center">
-                  <svg class="icon icon-3xl text-white my-4">
-                    <use xlink:href="node_modules/@coreui/icons/sprites/brand.svg#cib-twitter"></use>
-                  </svg>
-                  <div class="chart-wrapper position-absolute top-0 start-0 w-100 h-100">
-                    <canvas id="social-box-chart-2" height="90"></canvas>
-                  </div>
-                </div>
-                <div class="card-body row text-center">
-                  <div class="col">
-                    <div class="fs-5 fw-semibold">973k</div>
-                    <div class="text-uppercase text-body-secondary small">followers</div>
-                  </div>
-                  <div class="vr"></div>
-                  <div class="col">
-                    <div class="fs-5 fw-semibold">1.792</div>
-                    <div class="text-uppercase text-body-secondary small">tweets</div>
-                  </div>
-                </div>
-              </div>
-            </div>
             <!-- /.col-->
             <div class="col-sm-6 col-lg-4">
               <div class="card" style="--cui-card-cap-bg: #4875b4">
                 <div class="card-header position-relative d-flex justify-content-center align-items-center">
-                  <svg class="icon icon-3xl text-white my-4">
-                    <use xlink:href="node_modules/@coreui/icons/sprites/brand.svg#cib-linkedin"></use>
-                  </svg>
-                  <div class="chart-wrapper position-absolute top-0 start-0 w-100 h-100">
-                    <canvas id="social-box-chart-3" height="90"></canvas>
-                  </div>
+                  <a href="www.linkedin.com/in/elias-khallouk" target="_blank" style="text-decoration: none; color: inherit;">
+                    <svg class="icon icon-3xl text-white my-4">
+                      <use xlink:href="node_modules/@coreui/icons/sprites/brand.svg#cib-linkedin"></use>
+                    </svg>
+                    <div class="chart-wrapper position-absolute top-0 start-0 w-100 h-100">
+                      <canvas id="social-box-chart-3" height="90"></canvas>
+                    </div>
+                  </a>
                 </div>
                 <div class="card-body row text-center">
                   <div class="col">
-                    <div class="fs-5 fw-semibold">500+</div>
-                    <div class="text-uppercase text-body-secondary small">contacts</div>
+                    <div class="fs-5 fw-semibold">388</div>
+                    <div class="text-uppercase text-body-secondary small">relations</div>
                   </div>
                   <div class="vr"></div>
                   <div class="col">
-                    <div class="fs-5 fw-semibold">292</div>
-                    <div class="text-uppercase text-body-secondary small">feeds</div>
+                    <div class="fs-5 fw-semibold">7</div>
+                    <div class="text-uppercase text-body-secondary small">posts</div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- /.col-->
+            <div class="col-sm-6 col-lg-4">
+              <div id="github-stats"></div>
+            </div>
+            <!-- /.col-->
+            <div class="col-sm-6 col-lg-4">
+              <div class="card" style="--cui-card-cap-bg: #4875b4">
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=EliasKhallouk&layout=compact&theme=default" />
+              </div>
+            </div>
           </div>
           <!-- /.row-->
           <div class="row">
