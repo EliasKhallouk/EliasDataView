@@ -154,13 +154,13 @@ const cardChart2 = new Chart(document.getElementById('card-chart2'), {
 const cardChart3 = new Chart(document.getElementById('card-chart3'), {
   type: 'line',
   data: {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: ['BAC','S1', 'S2', 'S3', 'S4', 'S5', 'S6'],
     datasets: [
       {
-        label: 'My First dataset',
+        label: 'Moyenne générale',
         backgroundColor: 'rgba(255,255,255,.2)',
         borderColor: 'rgba(255,255,255,.55)',
-        data: [78, 81, 80, 45, 34, 12, 40],
+        data: [13.47, 12.49, 13.76, 12.5, 0, 15.8, 15.9],
         fill: true
       }
     ]
@@ -198,13 +198,13 @@ const cardChart3 = new Chart(document.getElementById('card-chart3'), {
 const cardChart4 = new Chart(document.getElementById('card-chart4'), {
   type: 'bar',
   data: {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December', 'January', 'February', 'March', 'April'],
+    labels: ['2023', '2024', '2025'],
     datasets: [
       {
-        label: 'My First dataset',
+        label: 'Crédits ECTS validés',
         backgroundColor: 'rgba(255,255,255,.2)',
         borderColor: 'rgba(255,255,255,.55)',
-        data: [78, 81, 80, 45, 34, 12, 40, 85, 65, 23, 12, 98, 34, 84, 67, 82],
+        data: [60,60,60],
         barPercentage: 0.6
       }
     ]
