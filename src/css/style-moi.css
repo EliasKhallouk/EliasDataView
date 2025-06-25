@@ -24,7 +24,7 @@
     background: rgba(255, 255, 255, 0.1);       /* fond blanc translucide */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
     overflow: hidden;                           /* pour que les coins arrondis masquent l'image */
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -43,10 +43,44 @@
   /* Optionnel : effet au survol */
   .card-glass:hover {
     transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(31, 38, 135, 0.5);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.5);
   }
   
   .card-glass:hover img {
     transform: scale(1.1);
   }
   
+/* ---- Carte verre de base ---- */
+.glass-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);   /* blanc translucide par défaut */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+
+
+/* ---- Variantes teintées ---- */
+.glass-success { background: rgba(34, 151, 65, 0.12); }      /* vert   */
+.glass-info    { background: rgba( 61, 153,245, 0.12); }      /* bleu   */
+.glass-warning { background: rgba(255,193,  7, 0.14); }       /* jaune  */
+.glass-danger  { background: rgba(220, 53, 69, 0.14); }       /* rouge  */
+
+/* ---- Typo & titres ---- */
+.titre-card {
+  font-size: x-large;
+  font-weight: 400;
+  margin-top: .25rem;
+  color: #fff;
+  opacity: .85;
+}
+
+/* Valeur principale (19, $6.200, …) */
+.card-body .fs-4 { color: #fff; }
+
+  /* Ajoute-le dans ton CSS */
+.c-chart-wrapper { height: 150px; position: relative; }

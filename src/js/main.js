@@ -38,11 +38,11 @@ const cardChart1 = new Chart(document.getElementById('card-chart1'), {
     labels: ['2022', '2023', '2024', '2025'],
     datasets: [
       {
-        label: 'My First dataset',
+        label: 'Nombre de projets réalisés',
         backgroundColor: 'transparent',
         borderColor: 'rgba(255,255,255,.55)',
-        pointBackgroundColor: coreui.Utils.getStyle('--cui-primary'),
-        data: [2, 4, 7, 4]
+        pointBackgroundColor: coreui.Utils.getStyle('--cui-success'),
+        data: [2, 5, 8, 4]
       }
     ]
   },
@@ -67,8 +67,8 @@ const cardChart1 = new Chart(document.getElementById('card-chart1'), {
         }
       },
       y: {
-        min: 30,
-        max: 89,
+        min: 0,
+        max: 10,
         display: false,
         grid: {
           display: false
@@ -80,8 +80,7 @@ const cardChart1 = new Chart(document.getElementById('card-chart1'), {
     },
     elements: {
       line: {
-        borderWidth: 1,
-        tension: 0.4
+        borderWidth: 1
       },
       point: {
         radius: 4,
@@ -95,14 +94,14 @@ const cardChart1 = new Chart(document.getElementById('card-chart1'), {
 const cardChart2 = new Chart(document.getElementById('card-chart2'), {
   type: 'line',
   data: {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: ['2022', '2023', '2024', '2025'],
     datasets: [
       {
-        label: 'My First dataset',
+        label: 'Mois en entreprise',
         backgroundColor: 'transparent',
         borderColor: 'rgba(255,255,255,.55)',
         pointBackgroundColor: coreui.Utils.getStyle('--cui-info'),
-        data: [1, 18, 9, 17, 34, 22, 11]
+        data: [0, 1, 5, 7]
       }
     ]
   },
@@ -127,8 +126,8 @@ const cardChart2 = new Chart(document.getElementById('card-chart2'), {
         }
       },
       y: {
-        min: -9,
-        max: 39,
+        min: -2,
+        max: 9,
         display: false,
         grid: {
           display: false
