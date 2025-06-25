@@ -1,0 +1,52 @@
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;               /* Doit être inférieur à celui du contenu */
+    pointer-events: auto;     /* Doit permettre de capter les clics/survols */
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+  }
+
+  .card-glass {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);       /* fond blanc translucide */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    overflow: hidden;                           /* pour que les coins arrondis masquent l'image */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-glass img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+  
+  /* Optionnel : effet au survol */
+  .card-glass:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(31, 38, 135, 0.5);
+  }
+  
+  .card-glass:hover img {
+    transform: scale(1.1);
+  }
+  

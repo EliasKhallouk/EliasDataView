@@ -39,6 +39,8 @@
     <link rel="stylesheet" href="css/vendors/simplebar.css">
     <!-- Main styles for this application-->
     <link href="css/style.css" rel="stylesheet">
+    <link href="src/css/style-moi.css" rel="stylesheet">
+
     <!-- We use those styles to show code examples, you should remove them in your application.-->
     <link href="css/examples.css" rel="stylesheet">
     <script src="js/config.js"></script>
@@ -46,6 +48,28 @@
     <script src="src/js/github.js"></script>
     <link href="node_modules/@coreui/icons/css/free.min.css" rel="stylesheet">
     <link href="node_modules/@coreui/chartjs/dist/css/coreui-chartjs.css" rel="stylesheet">
+    <script src="src/particles.js-master/particles.min.js"></script>
+    
+    <!-- <style>
+      #particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;               /* Doit être inférieur à celui du contenu */
+  pointer-events: auto;     /* Doit permettre de capter les clics/survols */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 100px;
+}
+
+    </style> -->
   </head>
   <body>
     <div class="sidebar sidebar-dark sidebar-fixed border-end" id="sidebar">
@@ -218,6 +242,8 @@
       </div>
     </div>
     <div class="wrapper d-flex flex-column min-vh-100">
+      <div id="particles-js"></div>
+
       <header class="header header-sticky p-0 mb-4">
         <div class="container-fluid border-bottom px-4">
           <button class="header-toggler" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()" style="margin-inline-start: -14px;">
@@ -341,12 +367,15 @@
               <span class="display-1">Elias Khallouk</span>
               <h2>
                 Étudiant ingénieur EFREI en big data & machine learning <br>
-                <i class="icon icon-xxl mb-2 cil-arrow-right"></i> Recherche contrat d'apprentissage
+                <!--<i class="icon icon-xxl mb-2 cil-arrow-right"></i> Recherche contrat d'apprentissage-->
               </h2>
             </div>
             <div class="col-sm-6 col-xl-3">
-                  <img  class="card" src="assets/img/Elias_remise_diplome.jpg" alt="Photo de Elias Khallouk" class="img-fluid" style="width: 100%; height: 100%;">
+              <div class="card-glass">
+                <img src="assets/img/Elias_remise_diplome.jpg" alt="Photo de Elias Khallouk" class="img-fluid" />
+              </div>
             </div>
+            
             <!--<div>
               <img src="assets/img/Elias_remise_diplome.jpg" alt="Photo de Elias Khallouk" class="img-fluid" style="max-width: 237px; border-radius: 55% 25% 17% 69% / 16% 28% 57% 92% ;">
             </div>-->
@@ -358,19 +387,8 @@
               <div class="card text-white bg-primary">
                 <div class="card-body pb-0 d-flex justify-content-between align-items-start">
                   <div>
-                    <div class="fs-4 fw-semibold">26K <span class="fs-6 fw-normal">(-12.4%
-                        <svg class="icon">
-                          <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-arrow-bottom"></use>
-                        </svg>)</span></div>
-                    <div>Users</div>
-                  </div>
-                  <div class="dropdown">
-                    <button class="btn btn-transparent text-white p-0" type="button" data-coreui-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <svg class="icon">
-                        <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-options"></use>
-                      </svg>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
+                    <div class="fs-4 fw-semibold">19 </div>
+                    <div>Nombre de projets réalisés</div>
                   </div>
                 </div>
                 <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;">
@@ -519,13 +537,18 @@
             }
         
             .flag {
-              background: #f0f0f0;
+              /* background: #f0f0f0; */
               padding: 10px 15px;
-              border-radius: 5px;
               font-weight: 600;
               position: relative;
               display: inline-block;
-              color : 	rgb(33, 38, 49);
+              color : 	#f3f4f7;
+              background: rgba(255, 255, 255, 0.12);         /* fond blanc translucide */
+              backdrop-filter: blur(10px);                    /* flou glassmorphism */
+              -webkit-backdrop-filter: blur(10px);            /* support Safari */
+              border-radius: 15px;
+              border: 1px solid rgba(255, 255, 255, 0.3);    /* bordure subtile */
+              box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             }
         
             .flag-before-ingenieur::before {
@@ -536,10 +559,12 @@
               width: 25px;
               height: 25px;
               transform: translate(-50%, -50%);
-              background: #fff;
+              background: rgba(34, 151, 65, 0.85);        /* rond vert plein translucide */
               border-radius: 50%;
-              border: 8px solid #229741; /* vert */
+              box-shadow: 0 0 12px rgba(34, 151, 65, 0.9), 0 0 20px rgba(34, 151, 65, 0.7);
               z-index: 1;
+              backdrop-filter: blur(6px);
+              -webkit-backdrop-filter: blur(6px);
             }
 
             .flag-before-mobilite::before {
@@ -550,10 +575,12 @@
               width: 25px;
               height: 25px;
               transform: translate(-50%, -50%);
-              background: #fff;
+              background: rgba(61, 153, 245, 0.85);       /* rond bleu plein */
               border-radius: 50%;
-              border: 8px solid #3d99f5; /* bleu */
+              box-shadow: 0 0 12px rgba(61, 153, 245, 0.9), 0 0 20px rgba(61, 153, 245, 0.7);
               z-index: 1;
+              backdrop-filter: blur(6px);
+              -webkit-backdrop-filter: blur(6px);
             }
 
             .flag-before-but::before {
@@ -564,10 +591,12 @@
               width: 25px;
               height: 25px;
               transform: translate(-50%, -50%);
-              background: #fff;
+              background: rgba(222, 90, 90, 0.85);        /* rond rouge plein */
               border-radius: 50%;
-              border: 8px solid #de5a5a; /* rouge */
+              box-shadow: 0 0 12px rgba(222, 90, 90, 0.9), 0 0 20px rgba(222, 90, 90, 0.7);
               z-index: 1;
+              backdrop-filter: blur(6px);
+              -webkit-backdrop-filter: blur(6px);
             }
 
             .flag-before-bac::before {
@@ -578,11 +607,14 @@
               width: 25px;
               height: 25px;
               transform: translate(-50%, -50%);
-              background: #fff;
+              background: rgba(238, 173, 32, 0.85);       /* rond jaune plein */
               border-radius: 50%;
-              border: 8px solid #eead20; /* jaune */
+              box-shadow: 0 0 12px rgba(238, 173, 32, 0.9), 0 0 20px rgba(238, 173, 32, 0.7);
               z-index: 1;
+              backdrop-filter: blur(6px);
+              -webkit-backdrop-filter: blur(6px);
             }
+
 
         
             .flag-success:before { color: #229741; }
@@ -602,12 +634,59 @@
               border-radius: 4px;
               font-weight: bold;
               color: white;
+              background: rgba(255, 255, 255, 0.12);         /* fond blanc translucide */
+              backdrop-filter: blur(10px);                    /* flou glassmorphism */
+              -webkit-backdrop-filter: blur(10px);            /* support Safari */
             }
         
-            .time-success { background-color: #229741; }
-            .time-danger  { background-color: #de5a5a; }
-            .time-warning { background-color: #eead20; color: black; }
-            .time-info    { background-color: #3d99f5; }
+            .time-success {
+              background: rgba(34, 151, 65, 0.4);           /* vert translucide */
+              backdrop-filter: blur(8px);
+              -webkit-backdrop-filter: blur(8px);
+              color: white;
+              padding: 6px 12px;
+              border-radius: 12px;
+              box-shadow: 0 0 10px rgba(34, 151, 65, 0.6);
+              font-weight: 600;
+              user-select: none;
+            }
+
+            .time-danger {
+              background: rgba(222, 90, 90, 0.4);           /* rouge translucide */
+              backdrop-filter: blur(8px);
+              -webkit-backdrop-filter: blur(8px);
+              color: white;
+              padding: 6px 12px;
+              border-radius: 12px;
+              box-shadow: 0 0 10px rgba(222, 90, 90, 0.6);
+              font-weight: 600;
+              user-select: none;
+            }
+
+            .time-warning {
+              background: rgba(238, 173, 32, 0.4);          /* jaune translucide */
+              backdrop-filter: blur(8px);
+              -webkit-backdrop-filter: blur(8px);
+              color: white;                                 /* noir pour contraste */
+              padding: 6px 12px;
+              border-radius: 12px;
+              box-shadow: 0 0 10px rgba(238, 173, 32, 0.6);
+              font-weight: 600;
+              user-select: none;
+            }
+
+            .time-info {
+              background: rgba(61, 153, 245, 0.4);          /* bleu translucide */
+              backdrop-filter: blur(8px);
+              -webkit-backdrop-filter: blur(8px);
+              color: white;
+              padding: 6px 12px;
+              border-radius: 12px;
+              box-shadow: 0 0 10px rgba(61, 153, 245, 0.6);
+              font-weight: 600;
+              user-select: none;
+            }
+
         
             .desc {
               font-style: italic;
@@ -1324,6 +1403,11 @@
         }
       });
       
+    </script>
+    <script>
+      particlesJS.load('particles-js', 'src/particles.js-master/particlesjs-config.json', function() {
+        console.log('Configuration JSON chargée !');
+      });
     </script>
     <!-- Plugins and scripts required by this view-->
     <script src="node_modules/chart.js/dist/chart.umd.js"></script>

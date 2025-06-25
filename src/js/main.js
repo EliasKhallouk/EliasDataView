@@ -35,14 +35,14 @@ const random = (min, max) =>
 const cardChart1 = new Chart(document.getElementById('card-chart1'), {
   type: 'line',
   data: {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: ['2022', '2023', '2024', '2025'],
     datasets: [
       {
         label: 'My First dataset',
         backgroundColor: 'transparent',
         borderColor: 'rgba(255,255,255,.55)',
         pointBackgroundColor: coreui.Utils.getStyle('--cui-primary'),
-        data: [65, 59, 84, 84, 51, 55, 40]
+        data: [2, 4, 7, 4]
       }
     ]
   },
