@@ -22,7 +22,7 @@ async function afficherStatsGithub() {
     // Construire le contenu HTML
     const container = document.getElementById('github-stats');
     container.innerHTML = `
-      <div class="card" style="--cui-card-cap-bg: #ffffff">
+      <div class="card-new" style="--cui-card-cap-bg: #ffffff">
           <div class="card-header position-relative d-flex justify-content-center align-items-center">
             <a href="${userData.html_url}" target="_blank" style="text-decoration: none; color: inherit;">
 

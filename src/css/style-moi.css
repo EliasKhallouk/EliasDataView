@@ -210,3 +210,38 @@
   padding: 16px 20px;
   box-shadow: 0 6px 24px rgba(0,0,0,0.25);
 }
+
+
+.card-new {
+  --cui-card-spacer-y: 1rem;
+  --cui-card-spacer-x: 1rem;
+  --cui-card-title-spacer-y: 0.5rem;
+  --cui-card-border-width: var(--cui-border-width);
+  --cui-card-border-color: var(--cui-border-color-translucent);
+  --cui-card-border-radius: var(--cui-border-radius);
+  --cui-card-inner-border-radius: calc(var(--cui-border-radius) -(var(--cui-border-width)));
+  --cui-card-cap-padding-y: 0.5rem;
+  --cui-card-cap-padding-x: 1rem;
+  --cui-card-cap-bg: rgba(var(--cui-body-color-rgb), 0.03);
+  --cui-card-bg: var(--cui-body-bg);
+  --cui-card-img-overlay-padding: 1rem;
+  --cui-card-group-margin: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--cui-card-height);
+  color: var(--cui-body-color);
+  word-wrap: break-word;
+  background-color: rgba(255, 255, 255, .08);
+  background-clip: border-box;
+  border: var(--cui-card-border-width) solid var(--cui-card-border-color);
+  border-radius: var(--cui-card-border-radius);
+}
+
+.card-body-new{
+  flex: 1 1 auto;
+  padding: var(--cui-card-spacer-y) var(--cui-card-spacer-x);
+  color: var(--cui-card-color);
+  background-color: rgba(255, 255, 255, .08);
+}
